@@ -56,8 +56,9 @@ Step 1: Merge the training and the test sets:
 Data <- rbind(Training, Test)
 ```
 Step 2: Extract only the measurements on the mean and standard deviation for each measurement:
-```{r}
+
 Create logical vector with TRUE values for entries containing mean or standard deviation values:
+```{r}
 ms_features <- grepl("subjectID|activityID|mean|std", names(Data))
 ```
 Subset united Data set to keep only necessary columns:
@@ -102,7 +103,7 @@ Merge the tidy data set with the activity data set:
 ```{r}
 Tidy <- merge(activity, Tidy)
 ```
-Write the final data into file:
+Write the final data into a file:
 ```{r}
 write.table(Tidy, file="fin_data.txt", row.names=FALSE, sep="\t")
 ```
