@@ -24,7 +24,7 @@ xTest <- read.table("./UCI HAR Dataset/test/X_test.txt", header=FALSE) # Test Se
 yTest <- read.table("./UCI HAR Dataset/test/y_test.txt", header=FALSE) # Test Labels
 
 ## Assign proper column names to retrieved data:
-colnames(activity) <- c("activityID", "activityType")
+colnames(activity) <- c("activityID", "activityName")
 colnames(sTrain) <- "subjectID"
 colnames(sTest) <- "subjectID"
 colnames(xTrain) <- features[,2]
